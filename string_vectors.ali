@@ -1,0 +1,95 @@
+V "GNAT Lib v2011"
+A -g
+A -g
+A -gnat05
+A -gnatA
+P SS ZX
+R nnvvnnnnnnnvvnnnnnvvnvnnnnvnnvnvnnvnnnnnnvnnvnvnnnnnnvnnnnvnvvnvnnvnnnnnnnnnnnnnn
+
+U string_vectors%b	string_vectors.ads	bdaee5be NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.containers%s	a-contai.ads		a-contai.ali
+W ada.containers.generic_array_sort%s
+W ada.containers.indefinite_vectors%s
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.finalization%s	a-finali.adb		a-finali.ali
+W ada.streams%s		a-stream.ads		a-stream.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.unchecked_deallocation%s
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+W system.strings.stream_ops%s  s-ststop.adb	s-ststop.ali
+
+U string_vectors%s	string_vectors.ads	deaf831b EB EE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.containers%s	a-contai.ads		a-contai.ali
+W ada.containers.indefinite_vectors%s
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.finalization%s	a-finali.adb		a-finali.ali
+W ada.streams%s		a-stream.ads		a-stream.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W system%s		system.ads		system.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+
+D ada.ads		20110428140902 3ffc8e18
+D a-charac.ads		20110428140858 2d3ec45b
+D a-chlat1.ads		20110428140858 2825df20
+D a-contai.ads		20110428140900 61e5e089
+D a-cgarso.ads		20110428140858 9129bfa8
+D a-coinve.ads		20110428140900 5c90b260
+D a-coinve.adb		20110428140900 bfa25f1b
+D a-except.ads		20110428140900 4759ecee
+D a-finali.ads		20110428140900 b333d305
+D a-stream.ads		20110428140902 2ca4ee37
+D a-string.ads		20110428140902 90ac6797
+D a-strmap.ads		20110428140902 9cb836fb
+D a-strunb.ads		20110428140902 3f91d4c5
+D a-tags.ads		20110428140902 7b33f560
+D a-unccon.ads		20110428140902 f9eb8f06
+D a-uncdea.ads		20110428140902 f15a5ed1
+D interfac.ads		20110428140906 f77d8799
+D string_vectors.ads	20120324064032 bdaee5be
+D string_vectors.ads	20120324064032 bdaee5be
+D system.ads		20110428140910 bc164b96
+D s-atocou.ads		20110428140906 f69b66ac
+D s-atocou.adb		20110428140906 2cb7797d
+D s-exctab.ads		20110428140906 66e51330
+D s-finroo.ads		20110428140906 2dd85ce2
+D s-maccod.ads		20110428140908 3a1fd69f
+D s-parame.ads		20110428140908 03aa3b01
+D s-secsta.ads		20110428140908 eea35a36
+D s-soflin.ads		20110428140908 607487c5
+D s-stache.ads		20110428140908 596fc1b4
+D s-stalib.ads		20110428140908 f78bcf95
+D s-stoele.ads		20110428140908 facd7d98
+D s-stoele.adb		20110428140908 afc5dc80
+D s-stratt.ads		20110428140908 aedef97e
+D s-string.ads		20110428140908 46b01415
+D s-ststop.ads		20110428140908 ee472be4
+D s-traent.ads		20110428140908 5221ee41
+D s-unstyp.ads		20110428140908 6ae15c76
+X 1 ada.ads
+16K9*Ada 19e8 19|1r6 1r29 2r5 4r31
+X 4 a-contai.ads
+16K13*Containers 24e19 19|1r33 4r35
+X 6 a-coinve.ads
+43k24*Indefinite_Vectors 368e38 19|1w44 4r46
+X 11 a-string.ads
+16K13*Strings 35e16 19|1r10 2r9
+X 13 a-strunb.ads
+76K21*Unbounded 489e26 19|1w18 2r17
+X 19 string_vectors.ads
+4K9*String_Vectors[6|43]
+

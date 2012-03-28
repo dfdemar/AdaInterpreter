@@ -1,0 +1,121 @@
+V "GNAT Lib v2011"
+A -g
+A -g
+A -gnat05
+A -gnatA
+P SS ZX
+R nnnnnnnnnnnnnnnnnnvvnvnnnvnnnnnvnnvnnnnnnvnnvnnnnnnnnnnnnnvnnvnnnnvnnnnnnnnnnnnnn
+
+U programstatements%b	programstatements.adb	3e8b0bfc NE OO PK IL
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+U programstatements%s	programstatements.ads	a95c823b EE NE OO PK IL
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W statementhandlers%s	statementhandlers.adb	statementhandlers.ali
+W string_vectors%s	string_vectors.ads	string_vectors.ali
+W system%s		system.ads		system.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W tokenhandlers%s	tokenhandlers.adb	tokenhandlers.ali
+
+D ada.ads		20110428140902 3ffc8e18
+D a-charac.ads		20110428140858 2d3ec45b
+D a-chlat1.ads		20110428140858 2825df20
+D a-contai.ads		20110428140900 61e5e089
+D a-coinve.ads		20110428140900 5c90b260
+D a-except.ads		20110428140900 4759ecee
+D a-finali.ads		20110428140900 b333d305
+D a-fihema.ads		20110428140900 1940728a
+D a-flteio.ads		20110428140900 e18a47a0
+D a-ioexce.ads		20110428140900 8b9de6cd
+D a-stream.ads		20110428140902 2ca4ee37
+D a-string.ads		20110428140902 90ac6797
+D a-strmap.ads		20110428140902 9cb836fb
+D a-strunb.ads		20110428140902 3f91d4c5
+D a-tags.ads		20110428140902 7b33f560
+D a-textio.ads		20110428140902 386df5d4
+D a-tiflio.ads		20110428140902 56fbda09
+D a-unccon.ads		20110428140902 f9eb8f06
+D gnat.ads		20110428140904 fd2ad2f1
+D g-arrspl.ads		20110428140904 c903d743
+D g-strspl.ads		20110428140904 dbf24c7a
+D interfac.ads		20110428140906 f77d8799
+D i-cstrea.ads		20110428140906 1bd72c32
+D programstatements.ads	20120327225236 5804d484
+D programstatements.adb	20120327225258 668fdf78
+D statementhandlers.ads	20120328032840 8e577696
+D statements.ads	20120324061544 3a47fb2b
+D string_vectors.ads	20120324064032 bdaee5be
+D system.ads		20110428140910 bc164b96
+D s-atocou.ads		20110428140906 f69b66ac
+D s-atocou.adb		20110428140906 2cb7797d
+D s-crtl.ads		20110428140906 ac77b159
+D s-exctab.ads		20110428140906 66e51330
+D s-ficobl.ads		20110428140906 443b9d66
+D s-finroo.ads		20110428140906 2dd85ce2
+D s-maccod.ads		20110428140908 3a1fd69f
+D s-parame.ads		20110428140908 03aa3b01
+D s-pooglo.ads		20110428140908 542f33d0
+D s-secsta.ads		20110428140908 eea35a36
+D s-soflin.ads		20110428140908 607487c5
+D s-stache.ads		20110428140908 596fc1b4
+D s-stalib.ads		20110428140908 f78bcf95
+D s-stoele.ads		20110428140908 facd7d98
+D s-stoele.adb		20110428140908 afc5dc80
+D s-stopoo.ads		20110428140908 5c51faf9
+D s-stratt.ads		20110428140908 aedef97e
+D s-traent.ads		20110428140908 5221ee41
+D s-unstyp.ads		20110428140908 6ae15c76
+D s-wchcon.ads		20110428140910 bfeb2e3d
+D tokenhandlers.ads	20120327222000 c55de486
+X 1 ada.ads
+16K9*Ada 19e8 24|1r37 1r50 2r36 2r49
+X 5 a-coinve.ads
+53R9*Vector 24|14r18[28|4]
+X 12 a-string.ads
+16K13*Strings 35e16 24|1r54 2r53
+X 14 a-strunb.ads
+76K21*Unbounded 489e26 24|1w62 2r61
+79R9*Unbounded_String 473e14 25|17r22
+94V13*To_Unbounded_String{79R9} 25|20s23
+100V13*To_String{string} 25|23s27 26s27
+X 16 a-textio.ads
+49K13*Text_IO 471e16 24|1w41 2r40
+X 24 programstatements.ads
+4K9*ProgramStatements 18l5 18e22 25|1b14 34l5 34t22
+6R9*ProgramStatement 8r64 12c9 16e17 25|3r64 5r10 14r10
+8V13*create_ProgramStatement{6R9} 8>37 25|3b13 11l8 11t31
+8r37 T{50|19R9} 25|3b37 8r19
+9V13*execute{integer} 9>21 9>39 25|13b13 30l8 30t15
+9b21 skip{boolean} 25|13b21 22r14
+9r39 T{50|19R9} 25|13b39 15r27
+14r10*tokens{5|53R9[28|4]} 25|8m9
+15a10*programname{string} 25|23m12
+X 25 programstatements.adb
+5r7 P{24|6R9} 8m7 9r14
+14r7 P{24|6R9} 23m10
+15r7 TK{50|19R9} 19m38 19r38 20r73 26m52 26r52 27r75 28m47 28r47 29r26
+16i7 tokensexecuted{integer} 27m7 28r31
+17r7 currenttoken{14|79R9} 20m7 23r37 26r37
+X 26 statementhandlers.ads
+4K9*StatementHandlers 24|1w73 2r72 25|27r25 26|16e22
+14V13*executeCompoundStatement{integer} 25|27s43
+X 28 string_vectors.ads
+4K9*String_Vectors[5|43] 24|1w21 2r20
+X 50 tokenhandlers.ads
+17K9*TokenHandlers 24|1w6 2r5 25|19r7 20r43 26r7 28r7 50|31e18
+19R9*TokenHandler 24|8r43 9r45 25|3r43 13r45 15r11 50|23e17
+21r10*tokens{5|53R9[28|4]} 25|8r21
+26V13*getCurrentToken{string} 25|20s57
+27U14*match 25|19s21 26s21
+28U14*moveAhead 25|28s21
+29V13*resetTokens{integer} 25|29s14
+
