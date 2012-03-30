@@ -6,7 +6,7 @@ A -gnatA
 P SS ZX
 R nnnnnnnnnnnvvnnnnnvnnvnnnnvnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnvnvnnvnnnnnnnnnnnnnn
 
-U statements%s		statements.ads		e061ecd8 EE OO PF PK
+U statements%s		statements.ads		3702e31f EE OO PF PK
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.finalization.heap_management%s  a-fihema.adb  a-fihema.ali
 W ada.streams%s		a-stream.ads		a-stream.ali
@@ -42,7 +42,7 @@ D g-arrspl.ads		20110428140904 c903d743
 D g-strspl.ads		20110428140904 dbf24c7a
 D interfac.ads		20110428140906 f77d8799
 D i-cstrea.ads		20110428140906 1bd72c32
-D statements.ads	20120324061544 3a47fb2b
+D statements.ads	20120330141128 4ff1e227
 D string_vectors.ads	20120324064032 bdaee5be
 D system.ads		20110428140910 bc164b96
 D s-atocou.ads		20110428140906 f69b66ac
@@ -65,17 +65,21 @@ D s-stratt.ads		20110428140908 aedef97e
 D s-traent.ads		20110428140908 5221ee41
 D s-unstyp.ads		20110428140908 6ae15c76
 D s-wchcon.ads		20110428140910 bfeb2e3d
-D tokenhandlers.ads	20120326021818 6788f24d
+D tokenhandlers.ads	20120330141304 c55de486
+X 5 a-coinve.ads
+53R9*Vector 24|14r18[25|4]
 X 24 statements.ads
-3K9*Statements 16l5 16e15
-5H9*Statement 6r40 11c9 14e17
+3K9*Statements 17l5 17e15
+5H9*Statement 6r40 9p13 9r65 12c9 15e17
 6P9*Statement_Access(5R9)
-8y13*execute{integer} 8>21
-8b21 skip{boolean}
-13r10*tokens{47|19R9}
+9y13*execute{integer} 9>21 9>39 9>59
+9b21 skip{boolean}
+9r39 T{47|19R9}
+9r59 M{5R9}
+14r10*tokens{5|53R9[25|4]}
 X 25 string_vectors.ads
-4K9*String_Vectors[5|43] 24|1w21 1r56
+4K9*String_Vectors[5|43] 24|1w6 1r41
 X 47 tokenhandlers.ads
-17K9*TokenHandlers 24|1w6 1r41 47|29e18
-19R9*TokenHandler 24|13r18 47|23e17
+17K9*TokenHandlers 24|1w22 1r57 47|31e18
+19R9*TokenHandler 24|9r45 47|23e17
 

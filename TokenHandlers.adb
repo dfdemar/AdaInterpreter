@@ -57,7 +57,7 @@ package body Tokenhandlers is
          T.executedtokens.Append(token);
          T.tokens.Delete_First;
       else
-         raise ParserException with ("Unexpected token: ");
+         raise ParserException with ("Unexpected token: " & token & " does not match " & T.tokens.First_Element);
       end if;
    end match;
 

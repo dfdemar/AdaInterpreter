@@ -7,7 +7,7 @@ A -gnatA
 P SS ZX
 R nnnnnnnnnnnnnnnnnnvnnvnnnvvnnnnnnnvnnnnnnvnnvnnnnnnnnnnnnnvnnvnnnnvnnnnnnnnnnnnnn
 
-U main%b		main.adb		0ffb8194 NE OO SU
+U main%b		main.adb		a59fe6dd NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
@@ -49,9 +49,9 @@ D g-strspl.ads		20110428140904 dbf24c7a
 D interfac.ads		20110428140906 f77d8799
 D i-cstrea.ads		20110428140906 1bd72c32
 D main.adb		20120328030550 829f5e83
-D programstatements.ads	20120327225236 5804d484
-D statementhandlers.ads	20120328032840 8e577696
-D statements.ads	20120324061544 3a47fb2b
+D programstatements.ads	20120330133342 f260b3cd
+D statements.ads	20120330141128 4ff1e227
+D statements-statementhandlers.ads  20120330141336 f32784c3
 D string_vectors.ads	20120324064032 bdaee5be
 D system.ads		20110428140910 bc164b96
 D s-atocou.ads		20110428140906 f69b66ac
@@ -74,7 +74,7 @@ D s-stratt.ads		20110428140908 aedef97e
 D s-traent.ads		20110428140908 5221ee41
 D s-unstyp.ads		20110428140908 6ae15c76
 D s-wchcon.ads		20110428140910 bfeb2e3d
-D tokenhandlers.ads	20120327222000 c55de486
+D tokenhandlers.ads	20120330141304 c55de486
 X 1 ada.ads
 16K9*Ada 19e8 26|1r6 2r6 3r6 4r6 8r5 9r5 10r5 11r5 27r7
 X 5 a-coinve.ads
@@ -102,8 +102,8 @@ X 26 main.adb
 19i4 var{integer} 31m4
 26i8 I{integer} 27r53
 X 27 programstatements.ads
-4K9*ProgramStatements 26|6w6 13r5 27|18e22
-9V13*execute{integer} 26|31s11
+4K9*ProgramStatements 26|6w6 13r5 27|17e22
+8V13*execute{integer} 26|31s11
 X 52 tokenhandlers.ads
 17K9*TokenHandlers 26|5w6 12r5 52|31e18
 19R9*TokenHandler 26|18r15 52|23e17

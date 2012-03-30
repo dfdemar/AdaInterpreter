@@ -1,17 +1,8 @@
 package body ProgramStatements is
 
-   function Create_ProgramStatement(T: in TokenHandler) return ProgramStatement is
-
-      P: ProgramStatement;
-
-   begin
-      P.tokens := T.tokens;
-      return P;
-
-   end Create_ProgramStatement;
-
    function execute(skip: in Boolean; T: in TokenHandler) return Integer is
       P: ProgramStatement;
+      C: CompoundStatement;
       TK: TokenHandler := T;
       tokensexecuted: Integer;
       currenttoken : Unbounded_String;
@@ -24,7 +15,7 @@ package body ProgramStatements is
       end if;
 
       TokenHandlers.match(To_String(currenttoken), TK);
-      tokensexecuted := StatementHandlers.executeCompoundStatement(False, TK);
+      tokensexecuted := execute(False, TK, C);
       TokenHandlers.moveAhead(tokensexecuted, TK);
       return resetTokens(TK);
    end execute;
