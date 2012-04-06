@@ -16,8 +16,7 @@ procedure Main is
 
    Filename : String := "C:/David/School/prog1.txt";
    T        : TokenHandler;
-   var      : Integer;
---   P        : ProgramStatement;
+   Dummy    : Integer;
 
 begin
 
@@ -27,11 +26,8 @@ begin
       Ada.Text_IO.Put_Line(Item => T.Tokens.Element(I));
    end loop;
 
---   P := create_ProgramStatement(T);
-   var := execute(False, T);
+   Dummy := execute(False, T);
 
-
-
---   Ada.Text_IO.Put_Line(Item => T.Tokens.Element(Index => 1));
+   --   Ada.Text_IO.Put_Line(Item => T.Tokens.Element(Index => 1));
 
 end Main;

@@ -1,0 +1,185 @@
+V "GNAT Lib v2011"
+A -g
+A -g
+A -gnat05
+A -gnatA
+P SS ZX
+R nnnvnnnnnnnvvnnnnnvvnvnnnvvnnnnvnnvnnnnnnvnnvnnnnnnnnnnnnnvnnvnvnnvnnnnnnnnnnnnnn
+
+U statements.statementhandlers%b  statements-statementhandlers.adb  96405724 NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.containers%s	a-contai.ads		a-contai.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.finalization.heap_management%s  a-fihema.adb  a-fihema.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W statements%s		statements.ads		statements.ali
+W statements.assignmentstatements%s  statements-assignmentstatements.adb  statements-assignmentstatements.ali
+W statements.printstatements%s  statements-printstatements.adb  statements-printstatements.ali
+W system%s		system.ads		system.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
+
+U statements.statementhandlers%s  statements-statementhandlers.ads  be9841f7 EE OO PF PK
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.streams%s		a-stream.ads		a-stream.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W statements%s		statements.ads		statements.ali
+W string_vectors%s	string_vectors.ads	string_vectors.ali
+W system%s		system.ads		system.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W tokenhandlers%s	tokenhandlers.adb	tokenhandlers.ali
+
+D ada.ads		20110428140902 3ffc8e18
+D a-charac.ads		20110428140858 2d3ec45b
+D a-chahan.ads		20110428140858 1d381dcd
+D a-chlat1.ads		20110428140858 2825df20
+D a-contai.ads		20110428140900 61e5e089
+D a-coinve.ads		20110428140900 5c90b260
+D a-except.ads		20110428140900 4759ecee
+D a-finali.ads		20110428140900 b333d305
+D a-fihema.ads		20110428140900 1940728a
+D a-flteio.ads		20110428140900 e18a47a0
+D a-inteio.ads		20110428140900 f64b89a4
+D a-ioexce.ads		20110428140900 8b9de6cd
+D a-stream.ads		20110428140902 2ca4ee37
+D a-string.ads		20110428140902 90ac6797
+D a-strmap.ads		20110428140902 9cb836fb
+D a-strunb.ads		20110428140902 3f91d4c5
+D a-tags.ads		20110428140902 7b33f560
+D a-textio.ads		20110428140902 386df5d4
+D a-tiflio.ads		20110428140902 56fbda09
+D a-tiinio.ads		20110428140902 aa04e5d6
+D a-unccon.ads		20110428140902 f9eb8f06
+D gnat.ads		20110428140904 fd2ad2f1
+D g-arrspl.ads		20110428140904 c903d743
+D g-strspl.ads		20110428140904 dbf24c7a
+D interfac.ads		20110428140906 f77d8799
+D i-cstrea.ads		20110428140906 1bd72c32
+D statements.ads	20120330153916 d0088f32
+D statements-assignmentstatements.ads  20120405182514 4d962092
+D statements-printstatements.ads  20120403233018 470c76ac
+D statements-statementhandlers.ads  20120403230954 06eff985
+D statements-statementhandlers.adb  20120405225950 2bd89724
+D string_vectors.ads	20120324064032 bdaee5be
+D system.ads		20110428140910 bc164b96
+D s-atocou.ads		20110428140906 f69b66ac
+D s-atocou.adb		20110428140906 2cb7797d
+D s-crtl.ads		20110428140906 ac77b159
+D s-exctab.ads		20110428140906 66e51330
+D s-ficobl.ads		20110428140906 443b9d66
+D s-finroo.ads		20110428140906 2dd85ce2
+D s-maccod.ads		20110428140908 3a1fd69f
+D s-parame.ads		20110428140908 03aa3b01
+D s-pooglo.ads		20110428140908 542f33d0
+D s-secsta.ads		20110428140908 eea35a36
+D s-soflin.ads		20110428140908 607487c5
+D s-stache.ads		20110428140908 596fc1b4
+D s-stalib.ads		20110428140908 f78bcf95
+D s-stoele.ads		20110428140908 facd7d98
+D s-stoele.adb		20110428140908 afc5dc80
+D s-stopoo.ads		20110428140908 5c51faf9
+D s-stratt.ads		20110428140908 aedef97e
+D s-traent.ads		20110428140908 5221ee41
+D s-unstyp.ads		20110428140908 6ae15c76
+D s-wchcon.ads		20110428140910 bfeb2e3d
+D tokenhandlers.ads	20120406015810 02257cdd
+X 1 ada.ads
+16K9*Ada 19e8 30|1r21 1r72 2r20 2r71 31|1r79 2r78
+X 5 a-contai.ads
+16K13*Containers 24e19 31|1w83 2r82
+20I9*Count_Type<integer>
+X 6 a-coinve.ads
+53R9*Vector 30|19r27[32|4] 31|58r24[32|4]
+85V13*Length{5|20I9} 31|70s32[32|4] 75s43[32|4] 77s51[32|4]
+212U14*Delete_First 31|71s29[32|4] 78s31[32|4]
+X 14 a-string.ads
+16K13*Strings 35e16 30|1r25 2r24
+X 16 a-strunb.ads
+76K21*Unbounded 489e26 30|1w33 2r32
+79R9*Unbounded_String 473e14 31|7r22 38r22
+94V13*To_Unbounded_String{79R9} 31|13s23 42s23 47s26
+100V13*To_String{string} 31|22s24
+170V13*"="{boolean} 31|14s23 18s26 43s26
+X 18 a-textio.ads
+49K13*Text_IO 471e16 30|1w76 2r75
+X 27 statements.ads
+3K9*Statements 16e15 30|1w60 2r59 4r9 22r5 31|1w6 1r18 1r46 2r5 2r17 2r45
+. 4r14 88r5
+5H9*Statement 14e17 30|6r34 7r31 16r34 17r31 31|17r22 21r22 25r22
+6P9*Statement_Access(5R9) 30|9r61 31|6r61 36r13 55r13
+8y13*execute{integer} 31|45R28 67R28
+13r10*tokens{6|53R9[32|4]} 31|31m9
+X 28 statements-assignmentstatements.ads
+4K20*AssignmentStatements 14e36 31|1w57 2r56
+6R9*AssignmentStatement<27|5R9> 12e62 31|10r22 24r22
+8U14*createAssignmentStatement 31|23s10
+X 29 statements-printstatements.ads
+4K20*PrintStatements 14e31 31|1w29 2r28
+6R9*PrintStatement<27|5R9> 12e57 31|9r22 20r22
+8U14*createPrintStatement 31|19s10
+X 30 statements-statementhandlers.ads
+4K20*StatementHandlers 27|3k9 30|22l16 22e33 31|4b25 88l16 88t33
+6R9*CompoundStatement<27|5R9> 10p14 10r66 11P13 11r65 16c9 16e60 31|8r22
+. 16r22 29r66 34r65
+7R9*WhileStatement<27|5R9> 12P13 12r65 17c9 20e17 31|53r65
+9U14*createStatement 9>30 9<51 31|6b14 27l8 27t23 44s10 64s7
+9r30 T{54|22R9} 31|6b30 13r73 15r34 19r31 23r36
+9p51 stmt{27|6P9} 31|6b51 16m10 17r10 20m10 21r10 24m10 25r10
+10U14*createCompoundStatement 10>38 10<59 31|15s10 29b14 32l8 32t31
+10r38 T{54|22R9} 31|29b38 31r19
+10r59 C{6R9} 31|29b59 31m7
+11V13*execute{integer}<27|8p13> 11>21 11>39 11>59 31|34b13 51l8 51t15
+11b21 skip{boolean} 31|34b21 45r36
+11r39 T{54|22R9} 31|34b39 35r27
+11r59 C{6R9} 31|34b59
+12V13*execute{integer}<27|8p13> 12>21 12>39 12>59 31|53b13 83l8 83t15
+12b21 skip{boolean} 31|53b21 67r36
+12r39 T{54|22R9} 31|53b39 54r27 64r23 75r26
+12r59 W{7R9} 31|53b59
+19r10 conditiontokens{6|53R9[32|4]}
+X 31 statements-statementhandlers.adb
+7r7 currenttoken{16|79R9} 13m7 14r10 18r13 22r34
+8r7 C{30|6R9} 15m37 15r37 17r38
+9r7 P{29|6R9} 19m34 19r34 21r38
+10r7 A{28|6R9} 23m39 23r39 25r38
+35r7 TK{54|22R9} 41m22 41r22 42r73 44r26 45r42 46m50 46r50 47r76 49m34 49r34
+. 50r40
+36p7 stmt{27|6P9} 44m30 44r30 45r46
+37i7 tokensexecuted{integer} 45m10 46r34
+38r7 currenttoken{16|79R9} 42m7 43r13 47m10
+54r7 TK{54|22R9} 61m22 61r22 62m23 62r23 63m19 63r19 67r42 68m10 74m26 74r26
+. 78m13 78r13 82r40
+55p7 stmt{27|6P9} 64m26 64r26 67r46
+56i7 tokensexecuted{integer} 67m10
+57b7 statementistrue{boolean} 62m44 62r44 66r13 74m47 74r47
+58r7 conditiontokens{6|53R9[32|4]} 62m27 62r27 68r26 70r16 71m13 71r13 74m30
+. 74r30 77r35
+59i7 size{integer} 75m10 77r20 77r64
+77i14 I{integer}
+X 32 string_vectors.ads
+4K9*String_Vectors[6|43] 30|1w44 2r43
+X 54 tokenhandlers.ads
+20K9*TokenHandlers 30|1w6 2r5 31|13r43 42r43 46r10 47r46 49r7 50r14 82r14
+. 54|42e18
+22R9*TokenHandler 30|9r37 10r45 11r45 12r45 31|6r37 29r45 34r45 35r11 53r45
+. 54r11 54|27e17
+24r10*tokens{6|53R9[32|4]} 31|31r21
+25r10*executedtokens{6|53R9[32|4]} 31|75r28 78m16
+26r10*tokencopy{6|53R9[32|4]} 31|68m13
+32V13*isVariable{boolean} 31|22s13
+35V13*getCurrentToken{string} 31|13s57 42s57 47s60
+36U14*match 31|41s7 49s21 61s7 63s7
+37U14*moveAhead 31|46s24
+38V13*resetTokens{integer} 31|50s28 82s28
+39U14*conditionIsTrue 31|62s7 74s10
+

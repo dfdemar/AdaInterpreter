@@ -17,6 +17,7 @@ package body ProgramStatements is
       TokenHandlers.match(To_String(currenttoken), TK);
       tokensexecuted := execute(False, TK, C);
       TokenHandlers.moveAhead(tokensexecuted, TK);
+            Ada.Integer_Text_IO.Put(Integer(T.tokens.Length));
       return resetTokens(TK);
    end execute;
 

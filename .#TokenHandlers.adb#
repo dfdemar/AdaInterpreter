@@ -94,7 +94,7 @@ package body Tokenhandlers is
       end loop;
    end moveAhead;
 
-   function resetTokens(T: in TokenHandler) return Integer is
+   function resetTokens(T: in TokenHandler; tokenSize: out Integer) is
       TK: TokenHandler := T;
       tokenSize: Integer := 0;
    begin

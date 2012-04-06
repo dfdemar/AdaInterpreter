@@ -1,0 +1,148 @@
+V "GNAT Lib v2011"
+A -g
+A -g
+A -gnat05
+A -gnatA
+P SS ZX
+R nnnnnnnnnnnnvnnnnnvnnvnnnnvnnnnvnnvnnnnnnvnnvnnnnnnnnnnnnnvnnvnvnnvnnnnnnnnnnnnnn
+
+U statements.assignmentstatements%b  statements-assignmentstatements.adb  d068d50a NE OO PK
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W statements%s		statements.ads		statements.ali
+W system%s		system.ads		system.ali
+W system.concat_2%s	s-conca2.adb		s-conca2.ali
+W system.exception_table%s  s-exctab.adb	s-exctab.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+U statements.assignmentstatements%s  statements-assignmentstatements.ads  ebcf6ba2 EE OO PF PK
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.streams%s		a-stream.ads		a-stream.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W statements%s		statements.ads		statements.ali
+W string_vectors%s	string_vectors.ads	string_vectors.ali
+W system%s		system.ads		system.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W tokenhandlers%s	tokenhandlers.adb	tokenhandlers.ali
+
+D ada.ads		20110428140902 3ffc8e18
+D a-charac.ads		20110428140858 2d3ec45b
+D a-chahan.ads		20110428140858 1d381dcd
+D a-chlat1.ads		20110428140858 2825df20
+D a-contai.ads		20110428140900 61e5e089
+D a-coinve.ads		20110428140900 5c90b260
+D a-except.ads		20110428140900 4759ecee
+D a-finali.ads		20110428140900 b333d305
+D a-fihema.ads		20110428140900 1940728a
+D a-flteio.ads		20110428140900 e18a47a0
+D a-inteio.ads		20110428140900 f64b89a4
+D a-ioexce.ads		20110428140900 8b9de6cd
+D a-stream.ads		20110428140902 2ca4ee37
+D a-string.ads		20110428140902 90ac6797
+D a-strmap.ads		20110428140902 9cb836fb
+D a-strunb.ads		20110428140902 3f91d4c5
+D a-tags.ads		20110428140902 7b33f560
+D a-textio.ads		20110428140902 386df5d4
+D a-tiflio.ads		20110428140902 56fbda09
+D a-tiinio.ads		20110428140902 aa04e5d6
+D a-unccon.ads		20110428140902 f9eb8f06
+D gnat.ads		20110428140904 fd2ad2f1
+D g-arrspl.ads		20110428140904 c903d743
+D g-strspl.ads		20110428140904 dbf24c7a
+D interfac.ads		20110428140906 f77d8799
+D i-cstrea.ads		20110428140906 1bd72c32
+D statements.ads	20120330153916 d0088f32
+D statements-assignmentstatements.ads  20120405182514 4d962092
+D statements-assignmentstatements.adb  20120405225502 9dfef598
+D string_vectors.ads	20120324064032 bdaee5be
+D system.ads		20110428140910 bc164b96
+D s-atocou.ads		20110428140906 f69b66ac
+D s-atocou.adb		20110428140906 2cb7797d
+D s-conca2.ads		20110428140906 fbd0f2fc
+D s-crtl.ads		20110428140906 ac77b159
+D s-exctab.ads		20110428140906 66e51330
+D s-ficobl.ads		20110428140906 443b9d66
+D s-finroo.ads		20110428140906 2dd85ce2
+D s-maccod.ads		20110428140908 3a1fd69f
+D s-parame.ads		20110428140908 03aa3b01
+D s-pooglo.ads		20110428140908 542f33d0
+D s-secsta.ads		20110428140908 eea35a36
+D s-soflin.ads		20110428140908 607487c5
+D s-stache.ads		20110428140908 596fc1b4
+D s-stalib.ads		20110428140908 f78bcf95
+D s-stoele.ads		20110428140908 facd7d98
+D s-stoele.adb		20110428140908 afc5dc80
+D s-stopoo.ads		20110428140908 5c51faf9
+D s-stratt.ads		20110428140908 aedef97e
+D s-traent.ads		20110428140908 5221ee41
+D s-unstyp.ads		20110428140908 6ae15c76
+D s-wchcon.ads		20110428140910 bfeb2e3d
+D tokenhandlers.ads	20120406015810 02257cdd
+X 1 ada.ads
+16K9*Ada 19e8 28|1r21 1r60 2r20 2r59
+X 6 a-coinve.ads
+53R9*Vector
+X 11 a-inteio.ads
+18K13*Integer_Text_IO[20|45] 28|1w64 2r63
+X 14 a-string.ads
+16K13*Strings 35e16 28|1r25 2r24
+X 16 a-strunb.ads
+76K21*Unbounded 489e26 28|1w33 2r32
+79R9*Unbounded_String 473e14 29|11r22
+94V13*To_Unbounded_String{79R9} 29|16s23 23s23 31s23 36s29 47s29 58s29 69s29
+. 78s26
+100V13*To_String{string} 29|17s25 18s59 21s13 26s42 30s13 33s28 38s42 43s19
+. 49s42 54s19 60s42 65s19 71s42 76s19
+139V13*Element{character} 29|20s32
+170V13*"="{boolean} 29|34s26 45s29 56s29 67s29
+X 27 statements.ads
+3K9*Statements 16e15 28|4r9 14r5 29|1r14 84r5
+5H9*Statement 14e17 28|6r36 12r36
+13r10*tokens{6|53R9[30|4]} 29|5m9
+X 28 statements-assignmentstatements.ads
+4K20*AssignmentStatements 27|3k9 28|14l16 14e36 29|1b25 84l16 84t36
+6R9*AssignmentStatement<27|5R9> 8p14 8r68 9P13 9r65 12c9 12e62 29|3r68 8r65
+8U14*createAssignmentStatement 8>40 8<61 29|3b14 6l8 6t33
+8r40 T{53|22R9} 29|3b40 5r19
+8r61 A{6R9} 29|3b61 5m7
+9V13*execute{integer}<27|8p13> 9>21 9>39 9>59 29|8b13 82l8 82t15
+9b21 skip{boolean} 29|8b21 25r14 37r20 48r20 59r20 70r20
+9r39 T{53|22R9} 29|8b39 10r28
+9r59 A{6R9} 29|8b59
+X 29 statements-assignmentstatements.adb
+9X7 ParserException 18r16
+10r7 TK{53|22R9} 16r73 21m38 21r38 22m19 22r19 23r73 30m38 30r38 31r73 35m24
+. 35r24 36r79 43m44 43r44 46m24 46r24 47r79 54m44 54r44 57m24 57r24 58r79
+. 65m44 65r44 68m24 68r24 69r79 76m44 76r44 78r76 81r26
+11r7 currenttoken{16|79R9} 16m7 17r35 18r69 20r40 21r23 23m7 26r52 30r23
+. 31m7 33r38 34r13 36m13 38r52 43r29 45r16 47m13 49r52 54r29 56r16 58m13
+. 60r52 65r29 67r16 69m13 71r52 76r29 78m10
+12e7 variablebeingassigned{character} 20m7 27r20 40r26 51r26 62r26 73r26
+13i7 variablevalue{integer} 26m10 27r46 39m16 39r33 40r52 50m16 50r33 51r52
+. 61m16 61r33 62r52 72m16 72r33 73r52
+14i7 operand{integer} 38m16 39r49 49m16 50r49 60m16 61r49 71m16 72r49
+X 30 string_vectors.ads
+4K9*String_Vectors[6|43] 28|1w44 2r43
+X 53 tokenhandlers.ads
+20K9*TokenHandlers 28|1w6 2r5 29|16r43 23r43 31r43 36r49 47r49 58r49 69r49
+. 78r46 53|42e18
+22R9*TokenHandler 28|8r47 9r45 29|3r47 8r45 10r12 53|27e17
+24r10*tokens{6|53R9[30|4]} 29|5r21
+29a4*variables(integer) 29|27m10 40m16 51m16 62m16 73m16
+32V13*isVariable{boolean} 29|17s14
+34V13*isMathOperator{boolean} 29|33s13
+35V13*getCurrentToken{string} 29|16s57 23s57 31s57 36s63 47s63 58s63 69s63
+. 78s60
+36U14*match 29|21s7 22s7 30s7 35s13 43s13 46s13 54s13 57s13 65s13 68s13 76s13
+38V13*resetTokens{integer} 29|81s14
+40V13*readTokenValue{integer} 29|26s27 38s27 49s27 60s27 71s27
+

@@ -10,10 +10,11 @@ package body ada_main is
    E109 : Short_Integer; pragma Import (Ada, E109, "system__fat_flt_E");
    E097 : Short_Integer; pragma Import (Ada, E097, "system__fat_llf_E");
    E021 : Short_Integer; pragma Import (Ada, E021, "system__exception_table_E");
-   E159 : Short_Integer; pragma Import (Ada, E159, "ada__containers_E");
+   E155 : Short_Integer; pragma Import (Ada, E155, "ada__containers_E");
    E076 : Short_Integer; pragma Import (Ada, E076, "ada__io_exceptions_E");
    E130 : Short_Integer; pragma Import (Ada, E130, "ada__strings_E");
    E136 : Short_Integer; pragma Import (Ada, E136, "ada__strings__maps_E");
+   E176 : Short_Integer; pragma Import (Ada, E176, "ada__strings__maps__constants_E");
    E047 : Short_Integer; pragma Import (Ada, E047, "ada__tags_E");
    E060 : Short_Integer; pragma Import (Ada, E060, "ada__streams_E");
    E078 : Short_Integer; pragma Import (Ada, E078, "interfaces__c_E");
@@ -24,20 +25,21 @@ package body ada_main is
    E132 : Short_Integer; pragma Import (Ada, E132, "ada__strings__unbounded_E");
    E070 : Short_Integer; pragma Import (Ada, E070, "system__storage_pools_E");
    E057 : Short_Integer; pragma Import (Ada, E057, "ada__finalization__heap_management_E");
-   E176 : Short_Integer; pragma Import (Ada, E176, "gnat__string_split_E");
+   E179 : Short_Integer; pragma Import (Ada, E179, "gnat__string_split_E");
    E083 : Short_Integer; pragma Import (Ada, E083, "system__os_lib_E");
    E088 : Short_Integer; pragma Import (Ada, E088, "system__pool_global_E");
    E086 : Short_Integer; pragma Import (Ada, E086, "system__file_control_block_E");
-   E163 : Short_Integer; pragma Import (Ada, E163, "ada__streams__stream_io_E");
+   E159 : Short_Integer; pragma Import (Ada, E159, "ada__streams__stream_io_E");
    E075 : Short_Integer; pragma Import (Ada, E075, "system__file_io_E");
-   E161 : Short_Integer; pragma Import (Ada, E161, "system__strings__stream_ops_E");
+   E157 : Short_Integer; pragma Import (Ada, E157, "system__strings__stream_ops_E");
    E055 : Short_Integer; pragma Import (Ada, E055, "ada__text_io_E");
    E094 : Short_Integer; pragma Import (Ada, E094, "ada__text_io__generic_aux_E");
-   E158 : Short_Integer; pragma Import (Ada, E158, "string_vectors_E");
-   E156 : Short_Integer; pragma Import (Ada, E156, "statements_E");
-   E167 : Short_Integer; pragma Import (Ada, E167, "tokenhandlers_E");
-   E153 : Short_Integer; pragma Import (Ada, E153, "statementhandlers_E");
-   E155 : Short_Integer; pragma Import (Ada, E155, "compoundstatements_E");
+   E154 : Short_Integer; pragma Import (Ada, E154, "string_vectors_E");
+   E163 : Short_Integer; pragma Import (Ada, E163, "tokenhandlers_E");
+   E152 : Short_Integer; pragma Import (Ada, E152, "statements_E");
+   E183 : Short_Integer; pragma Import (Ada, E183, "statements__assignmentstatements_E");
+   E185 : Short_Integer; pragma Import (Ada, E185, "statements__printstatements_E");
+   E181 : Short_Integer; pragma Import (Ada, E181, "statements__statementhandlers_E");
    E151 : Short_Integer; pragma Import (Ada, E151, "programstatements_E");
 
    Local_Priority_Specific_Dispatching : constant String := "";
@@ -49,101 +51,108 @@ package body ada_main is
       LE_Set : Boolean;
       pragma Import (Ada, LE_Set, "__gnat_library_exception_set");
    begin
-      E153 := E153 - 1;
-      E155 := E155 - 1;
+      E181 := E181 - 1;
       declare
          procedure F1;
-         pragma Import (Ada, F1, "compoundstatements__finalize_spec");
+         pragma Import (Ada, F1, "statements__statementhandlers__finalize_spec");
       begin
          F1;
       end;
+      E185 := E185 - 1;
       declare
          procedure F2;
-         pragma Import (Ada, F2, "statementhandlers__finalize_spec");
+         pragma Import (Ada, F2, "statements__printstatements__finalize_spec");
       begin
          F2;
       end;
+      E183 := E183 - 1;
       declare
          procedure F3;
-         pragma Import (Ada, F3, "statements__finalize_spec");
+         pragma Import (Ada, F3, "statements__assignmentstatements__finalize_spec");
       begin
-         E156 := E156 - 1;
          F3;
       end;
       declare
          procedure F4;
-         pragma Import (Ada, F4, "ada__text_io__generic_aux__finalize_body");
+         pragma Import (Ada, F4, "statements__finalize_spec");
       begin
-         E094 := E094 - 1;
+         E152 := E152 - 1;
          F4;
       end;
       declare
          procedure F5;
-         pragma Import (Ada, F5, "ada__text_io__finalize_body");
+         pragma Import (Ada, F5, "ada__text_io__generic_aux__finalize_body");
       begin
-         E055 := E055 - 1;
+         E094 := E094 - 1;
          F5;
       end;
       declare
          procedure F6;
-         pragma Import (Ada, F6, "ada__text_io__finalize_spec");
+         pragma Import (Ada, F6, "ada__text_io__finalize_body");
       begin
+         E055 := E055 - 1;
          F6;
       end;
       declare
          procedure F7;
-         pragma Import (Ada, F7, "ada__streams__stream_io__finalize_body");
+         pragma Import (Ada, F7, "ada__text_io__finalize_spec");
       begin
-         E163 := E163 - 1;
          F7;
       end;
       declare
          procedure F8;
-         pragma Import (Ada, F8, "system__file_io__finalize_body");
+         pragma Import (Ada, F8, "ada__streams__stream_io__finalize_body");
       begin
-         E075 := E075 - 1;
+         E159 := E159 - 1;
          F8;
       end;
       declare
          procedure F9;
-         pragma Import (Ada, F9, "ada__streams__stream_io__finalize_spec");
+         pragma Import (Ada, F9, "system__file_io__finalize_body");
       begin
+         E075 := E075 - 1;
          F9;
       end;
       declare
          procedure F10;
-         pragma Import (Ada, F10, "system__file_control_block__finalize_spec");
+         pragma Import (Ada, F10, "ada__streams__stream_io__finalize_spec");
+      begin
+         F10;
+      end;
+      declare
+         procedure F11;
+         pragma Import (Ada, F11, "system__file_control_block__finalize_spec");
       begin
          E086 := E086 - 1;
-         F10;
+         F11;
       end;
       E088 := E088 - 1;
       declare
-         procedure F11;
-         pragma Import (Ada, F11, "system__pool_global__finalize_spec");
-      begin
-         F11;
-      end;
-      E057 := E057 - 1;
-      declare
          procedure F12;
-         pragma Import (Ada, F12, "ada__finalization__heap_management__finalize_spec");
+         pragma Import (Ada, F12, "system__pool_global__finalize_spec");
       begin
          F12;
       end;
-      E132 := E132 - 1;
+      E057 := E057 - 1;
       declare
          procedure F13;
-         pragma Import (Ada, F13, "ada__strings__unbounded__finalize_spec");
+         pragma Import (Ada, F13, "ada__finalization__heap_management__finalize_spec");
       begin
          F13;
       end;
-      E062 := E062 - 1;
+      E132 := E132 - 1;
       declare
          procedure F14;
-         pragma Import (Ada, F14, "system__finalization_root__finalize_spec");
+         pragma Import (Ada, F14, "ada__strings__unbounded__finalize_spec");
       begin
          F14;
+      end;
+      E062 := E062 - 1;
+      declare
+         procedure F15;
+         pragma Import (Ada, F15, "system__finalization_root__finalize_spec");
+      begin
+         F15;
       end;
       if LE_Set then
          declare
@@ -249,12 +258,14 @@ package body ada_main is
       System.Exception_Table'Elab_Body;
       E021 := E021 + 1;
       Ada.Containers'Elab_Spec;
-      E159 := E159 + 1;
+      E155 := E155 + 1;
       Ada.Io_Exceptions'Elab_Spec;
       E076 := E076 + 1;
       Ada.Strings'Elab_Spec;
       E130 := E130 + 1;
       Ada.Strings.Maps'Elab_Spec;
+      Ada.Strings.Maps.Constants'Elab_Spec;
+      E176 := E176 + 1;
       Ada.Tags'Elab_Spec;
       Ada.Streams'Elab_Spec;
       E060 := E060 + 1;
@@ -280,7 +291,7 @@ package body ada_main is
       Ada.Finalization.Heap_Management'Elab_Spec;
       E057 := E057 + 1;
       Gnat.String_Split'Elab_Spec;
-      E176 := E176 + 1;
+      E179 := E179 + 1;
       System.Os_Lib'Elab_Body;
       E083 := E083 + 1;
       System.Pool_Global'Elab_Spec;
@@ -291,24 +302,27 @@ package body ada_main is
       System.File_Io'Elab_Body;
       E075 := E075 + 1;
       Ada.Streams.Stream_Io'Elab_Body;
-      E163 := E163 + 1;
+      E159 := E159 + 1;
       System.Strings.Stream_Ops'Elab_Body;
-      E161 := E161 + 1;
+      E157 := E157 + 1;
       Ada.Text_Io'Elab_Spec;
       Ada.Text_Io'Elab_Body;
       E055 := E055 + 1;
       Ada.Text_Io.Generic_Aux'Elab_Body;
       E094 := E094 + 1;
       String_Vectors'Elab_Spec;
-      E158 := E158 + 1;
+      E154 := E154 + 1;
+      tokenhandlers'elab_spec;
+      E163 := E163 + 1;
       Statements'Elab_Spec;
-      E156 := E156 + 1;
-      E167 := E167 + 1;
-      Statementhandlers'Elab_Spec;
-      Compoundstatements'Elab_Spec;
-      E155 := E155 + 1;
+      E152 := E152 + 1;
+      Statements.Assignmentstatements'Elab_Spec;
+      E183 := E183 + 1;
+      Statements.Printstatements'Elab_Spec;
+      E185 := E185 + 1;
+      Statements.Statementhandlers'Elab_Spec;
+      E181 := E181 + 1;
       E151 := E151 + 1;
-      E153 := E153 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
@@ -345,11 +359,12 @@ package body ada_main is
 
 --  BEGIN Object file/option list
    --   C:\Users\DavidDeMar\AdaInterpreter\String_Vectors.o
-   --   C:\Users\DavidDeMar\AdaInterpreter\Statements.o
    --   C:\Users\DavidDeMar\AdaInterpreter\TokenHandlers.o
-   --   C:\Users\DavidDeMar\AdaInterpreter\CompoundStatements.o
+   --   C:\Users\DavidDeMar\AdaInterpreter\Statements.o
+   --   C:\Users\DavidDeMar\AdaInterpreter\Statements-AssignmentStatements.o
+   --   C:\Users\DavidDeMar\AdaInterpreter\Statements-PrintStatements.o
+   --   C:\Users\DavidDeMar\AdaInterpreter\Statements-StatementHandlers.o
    --   C:\Users\DavidDeMar\AdaInterpreter\ProgramStatements.o
-   --   C:\Users\DavidDeMar\AdaInterpreter\StatementHandlers.o
    --   C:\Users\DavidDeMar\AdaInterpreter\Main.o
    --   -LC:\Users\DavidDeMar\AdaInterpreter\
    --   -LC:/GNAT/2011/lib/gcc/i686-pc-mingw32/4.5.3/adalib/

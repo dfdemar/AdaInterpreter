@@ -1,26 +1,34 @@
 V "GNAT Lib v2011"
-M P W=b
 A -g
 A -g
 A -gnat05
 A -gnatA
 P SS ZX
-R nnnnnnnnnnnnnnnnnnvnnvnnnvvnnnnnnnvnnnnnnvnnvnnnnnnnnnnnnnvnnvnnnnvnnnnnnnnnnnnnn
+R nnnnnnnnnnnnvnnnnnvnnvnnnnvnnnnvnnvnnnnnnvnnvnnnnnnnnnnnnnvnnvnvnnvnnnnnnnnnnnnnn
 
-U main%b		main.adb		82389555 NE OO SU
+U statements.printstatements%b  statements-printstatements.adb  41cb81a8 NE OO PK
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W statements%s		statements.ads		statements.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+U statements.printstatements%s  statements-printstatements.ads  e1553d9c EE OO PF PK
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
-W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.streams%s		a-stream.ads		a-stream.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
-W ada.text_io%s		a-textio.adb		a-textio.ali
-W programstatements%s	programstatements.adb	programstatements.ali
+W statements%s		statements.ads		statements.ali
+W string_vectors%s	string_vectors.ads	string_vectors.ali
 W system%s		system.ads		system.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W system.standard_library%s  s-stalib.adb	s-stalib.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
 W tokenhandlers%s	tokenhandlers.adb	tokenhandlers.ali
 
 D ada.ads		20110428140902 3ffc8e18
@@ -49,10 +57,9 @@ D g-arrspl.ads		20110428140904 c903d743
 D g-strspl.ads		20110428140904 dbf24c7a
 D interfac.ads		20110428140906 f77d8799
 D i-cstrea.ads		20110428140906 1bd72c32
-D main.adb		20120405210258 3b503e89
-D programstatements.ads	20120406020232 ab703814
 D statements.ads	20120330153916 d0088f32
-D statements-statementhandlers.ads  20120403230954 06eff985
+D statements-printstatements.ads  20120403233018 470c76ac
+D statements-printstatements.adb  20120405162024 06c7f704
 D string_vectors.ads	20120324064032 bdaee5be
 D system.ads		20110428140910 bc164b96
 D s-atocou.ads		20110428140906 f69b66ac
@@ -77,37 +84,45 @@ D s-unstyp.ads		20110428140908 6ae15c76
 D s-wchcon.ads		20110428140910 bfeb2e3d
 D tokenhandlers.ads	20120406015810 02257cdd
 X 1 ada.ads
-16K9*Ada 19e8 27|1r6 2r6 3r6 4r6 8r5 9r5 10r5 11r5 26r7
+16K9*Ada 19e8 28|1r21 1r60 2r20 2r59 29|15r10
 X 6 a-coinve.ads
-47I12*Extended_Index{integer}
 53R9*Vector
-101V13*Element{string} 27|26s45[31|4]
-226V13*First_Index{integer} 27|25s22[31|4]
-232V13*Last_Index{47I12[31|4]} 27|25s46[31|4]
-X 10 a-flteio.ads
-20K13*Float_Text_IO[19|45] 27|3w10 10r9
 X 11 a-inteio.ads
-18K13*Integer_Text_IO[20|45] 27|2w10 9r9
+18K13*Integer_Text_IO[20|45] 28|1w64 2r63 29|15r14
 X 14 a-string.ads
-16K13*Strings 35e16 27|4r10 11r9
+16K13*Strings 35e16 28|1r25 2r24
 X 16 a-strunb.ads
-76K21*Unbounded 489e26 27|4w18 11r17
-X 18 a-textio.ads
-49K13*Text_IO 471e16 27|1w10 8r9 26r11
-263U14*Put_Line 27|26s19
-264s7 Item{string} 27|26r28
-X 27 main.adb
-15U11*Main 15b11 33l5 33t9
-17a4 Filename{string} 23r23
-18r4 T{53|22R9} 23m4 25r13 25r37 26r36 29r28
-19i4 Dummy{integer} 29m4
-25i8 I{integer} 26r53
-X 28 programstatements.ads
-4K9*ProgramStatements 27|6w6 13r5 28|17e22
-8V13*execute{integer} 27|29s13
-X 53 tokenhandlers.ads
-20K9*TokenHandlers 27|5w6 12r5 53|42e18
-22R9*TokenHandler 27|18r15 53|27e17
-24r10*tokens{6|53R9[31|4]} 27|25r15 25r39 26r38
-31V13*create_Tokens{22R9} 27|23s9
+76K21*Unbounded 489e26 28|1w33 2r32
+79R9*Unbounded_String 473e14 29|10r19
+94V13*To_Unbounded_String{79R9} 29|13s20
+100V13*To_String{string} 29|15s49 17s13
+X 20 a-tiinio.ads
+65U14*Put 29|15s30[11|18]
+X 27 statements.ads
+3K9*Statements 16e15 28|4r9 14r5 29|1r14 21r5
+5H9*Statement 14e17 28|6r31 12r31
+13r10*tokens{6|53R9[30|4]} 29|5m9
+X 28 statements-printstatements.ads
+4K20*PrintStatements 27|3k9 28|14l16 14e31 29|1b25 21l16 21t31
+6R9*PrintStatement<27|5R9> 8p14 8r63 9P13 9r65 12c9 12e57 29|3r63 8r65
+8U14*createPrintStatement 8>35 8<56 29|3b14 6l8 6t28
+8r35 T{52|22R9} 29|3b35 5r19
+8r56 P{6R9} 29|3b56 5m7
+9V13*execute{integer}<27|8p13> 9>21 9>39 9>59 29|8b13 19l8 19t15
+9b21 skip{boolean} 29|8b21 14r14
+9r39 T{52|22R9} 29|8b39 9r28
+9r59 P{6R9} 29|8b59
+X 29 statements-printstatements.adb
+9r7 TK{52|22R9} 12m22 12r22 13r56 17m35 17r35 18r26
+10r7 nexttoken{16|79R9} 13m7 15r59 17r23
+X 30 string_vectors.ads
+4K9*String_Vectors[6|43] 28|1w44 2r43
+X 52 tokenhandlers.ads
+20K9*TokenHandlers 28|1w6 2r5 52|42e18
+22R9*TokenHandler 28|8r42 9r45 29|3r42 8r45 9r12 52|27e17
+24r10*tokens{6|53R9[30|4]} 29|5r21
+35V13*getCurrentToken{string} 29|13s40
+36U14*match 29|12s7 17s7
+38V13*resetTokens{integer} 29|18s14
+40V13*readTokenValue{integer} 29|15s34
 
