@@ -5,8 +5,7 @@ package Statements.AssignmentStatements is
 
    type AssignmentStatement is new Statement with private;
 
-   procedure createAssignmentStatement(T : in TokenHandler; A: out AssignmentStatement);
-   function execute(skip: in Boolean; T: in TokenHandler; A: in AssignmentStatement) return Integer;
+   procedure execute(skip: in Boolean; A: in out AssignmentStatement; reset: out Integer);
 
 private
    type AssignmentStatement is new Statement with null record;

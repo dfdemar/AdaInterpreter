@@ -1,84 +1,81 @@
 package body Statements.AssignmentStatements is
 
-   procedure createAssignmentStatement(T : in TokenHandler; A: out AssignmentStatement) is
-   begin
-      A.tokens := T.tokens;
-   end createAssignmentStatement;
-
-   function execute(skip: in Boolean; T: in TokenHandler; A: in AssignmentStatement) return Integer is
+   procedure execute(skip: in Boolean; A: in out AssignmentStatement; reset: out Integer) is
       ParserException : Exception;
-      TK : TokenHandler := T;
       currenttoken : Unbounded_String;
       variablebeingassigned : Character;
       variablevalue : Integer;
       operand : Integer;
    begin
-      currenttoken := To_Unbounded_String(TokenHandlers.getCurrentToken(TK));
+      currenttoken := getCurrentToken(A);
       if(not isVariable(To_String(currenttoken))) then
          raise ParserException with ("Not a variable: " & To_String(currenttoken));
       end if;
       variablebeingassigned := Element(currenttoken, 1);
-      match(To_String(currenttoken), TK);
-      match(":=", TK);
-      currenttoken := To_Unbounded_String(TokenHandlers.getCurrentToken(TK));
+      match(A, currenttoken);
+      match(A, ":=");
+      currenttoken := getCurrentToken(A);
 
       if(not skip) then
          variablevalue := readTokenValue(To_String(currenttoken));
          variables(variablebeingassigned) := variablevalue;
       end if;
 
-      match(to_String(currenttoken), TK);
-      currenttoken := To_Unbounded_String(TokenHandlers.getCurrentToken(TK));
+      match(A, currenttoken);
+      currenttoken := getCurrentToken(A);
 
       while isMathOperator(To_String(currenttoken)) loop
          if currenttoken = "+" then
-            match("+", TK);
-            currenttoken := To_Unbounded_String(TokenHandlers.getCurrentToken(TK));
+            match(A, "+");
+            currenttoken := getCurrentToken(A);
             if(not skip) then
                operand := readTokenValue(To_String(currenttoken));
                variablevalue := variablevalue + operand;
                variables(variablebeingassigned) := variablevalue;
             end if;
 
-            match(to_String(currenttoken), TK);
+            match(A, currenttoken);
 
          elsif currenttoken = "-" then
-            match("-", TK);
-            currenttoken := To_Unbounded_String(TokenHandlers.getCurrentToken(TK));
+            match(A, "-");
+            currenttoken := getCurrentToken(A);
             if(not skip) then
                operand := readTokenValue(To_String(currenttoken));
                variablevalue := variablevalue - operand;
                variables(variablebeingassigned) := variablevalue;
             end if;
 
-            match(to_String(currenttoken), TK);
+            match(A, currenttoken);
 
          elsif currenttoken = "*" then
-            match("*", TK);
-            currenttoken := To_Unbounded_String(TokenHandlers.getCurrentToken(TK));
+            match(A, "*");
+            currenttoken := getCurrentToken(A);
             if(not skip) then
                operand := readTokenValue(To_String(currenttoken));
                variablevalue := variablevalue * operand;
                variables(variablebeingassigned) := variablevalue;
             end if;
 
-            match(to_String(currenttoken), TK);
+            match(A, currenttoken);
 
          elsif currenttoken = "/" then
-            match("/", TK);
-            currenttoken := To_Unbounded_String(TokenHandlers.getCurrentToken(TK));
+            match(A, "/");
+            currenttoken := getCurrentToken(A);
             if(not skip) then
                operand := readTokenValue(To_String(currenttoken));
+               if operand = 0 then
+                  raise ParserException with("Cannot divide by zero.");
+               end if;
                variablevalue := variablevalue / operand;
                variables(variablebeingassigned) := variablevalue;
             end if;
 
-            match(to_String(currenttoken), TK);
+            match(A, currenttoken);
          end if;
-         currenttoken := To_Unbounded_String(TokenHandlers.getCurrentToken(TK));
+         currenttoken := getCurrentToken(A);
       end loop;
 
-      return resetTokens(TK);
+      resetTokens(A, reset);
    end execute;
 
 end Statements.AssignmentStatements;

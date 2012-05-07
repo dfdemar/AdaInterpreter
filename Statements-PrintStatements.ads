@@ -5,8 +5,7 @@ package Statements.PrintStatements is
 
    type PrintStatement is new Statement with private;
 
-   procedure createPrintStatement(T : in TokenHandler; P: out PrintStatement);
-   function execute(skip: in Boolean; T: in TokenHandler; P: in PrintStatement) return Integer;
+   procedure execute(skip: in Boolean; P: in out PrintStatement; reset: out Integer);
 
 private
    type PrintStatement is new Statement with null record;

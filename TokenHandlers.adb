@@ -2,12 +2,12 @@ with String_Vectors; use String_Vectors;
 
 package body Tokenhandlers is
 
-   function Create_Tokens (Filename: in String) return TokenHandler is
+   function Create_Tokens (Filename: String) return Vector is
 
       Contents : Unbounded_String := Null_Unbounded_String;
       File     : Ada.Text_IO.File_Type;
       List     : String_Split.Slice_Set;
-      T        : TokenHandler;
+      tokens   : Vector;
 
       Delimiters : constant String := " " & Latin_1.Semicolon & Latin_1.LF;
 
@@ -36,19 +36,19 @@ package body Tokenhandlers is
             S : constant String := String_Split.Slice (List, I);
             --  Pull the next substring out into a string object for easy handling.
          begin
-            T.Tokens.Append(S);
+            tokens.Append(To_Lower(S));
          end;
       end loop;
 
-      return T;
-
+      return tokens;
    end Create_Tokens;
 
    function isVariable(token: in String) return Boolean is
       pragma Assert (token'First = 1);
+      variable : Unbounded_String := To_Unbounded_String(token);
    begin
-      if(token'Length = 1) then
-         return (Is_Letter(token(1)));
+      if(token'Length = 1 and Is_Letter(Element(variable, 1))) then
+         return True;
       end if;
 
       return False;
@@ -70,130 +70,18 @@ package body Tokenhandlers is
       return token = "+" or token = "-" or token = "*" or token = "/";
    end isMathOperator;
 
-   function getCurrentToken(T: in TokenHandler) return String is
-      token : String := T.Tokens.Element(0);
-   begin
-      return token;
-   end getCurrentToken;
-
-   procedure match(token : in String; T: in out TokenHandler) is
-      ParserException : Exception;
-   begin
-      if(token = T.Tokens.First_Element) then
-         T.executedtokens.Append(token);
-         T.tokens.Delete_First;
-      else
-         raise ParserException with ("Unexpected token: " & token & " does not match " & T.tokens.First_Element);
-      end if;
-   end match;
-
-   procedure moveAhead(numberofelements: in Integer; T: in out TokenHandler) is
-   begin
-      for I in Integer range 1 .. numberofelements loop
-         match(getCurrentToken(T), T);
-      end loop;
-   end moveAhead;
-
-   function resetTokens(T: in TokenHandler) return Integer is
-      TK: TokenHandler := T;
-      tokenSize: Integer := 0;
-   begin
-      for I in T.Tokens.First_Index .. T.Tokens.Last_Index loop
-         TK.tokens.Delete_First;
-      end loop;
-
-      for I in T.executedtokens.First_Index .. T.executedtokens.Last_Index loop
-         TK.tokens.Append(New_Item => TK.executedtokens.Element(I));
-         tokensize := tokensize + 1;
-      end loop;
-
-      for I in T.executedtokens.First_Index .. T.executedtokens.Last_Index loop
-         TK.executedtokens.Delete_First;
-      end loop;
-      return tokenSize;
-   end resetTokens;
-
-   procedure conditionIsTrue(T: in out TokenHandler; outCondition: in out Vector; Condition: out Boolean) is
-      ParserException : Exception;
-      currenttoken: String := T.tokens.First_Element;
-      leftvalue: Integer;
-      rightvalue: Integer;
-   begin
-      leftvalue := readTokenValue(currenttoken);
-      outCondition.Append(currenttoken);
-      match(currenttoken, T);
-      currenttoken := T.tokens.First_Element;
-
-      if(currenttoken = "<") then
-         outCondition.Append(currenttoken);
-         match(currenttoken, T);
-         currenttoken := T.tokens.First_Element;
-         rightvalue := readTokenValue(currenttoken);
-         outCondition.Append(currenttoken);
-         match(currenttoken, T);
-         Condition := (leftvalue < rightvalue);
-
-      elsif(currenttoken = ">") then
-         outCondition.Append(currenttoken);
-         match(currenttoken, T);
-         currenttoken := T.tokens.First_Element;
-         rightvalue := readTokenValue(currenttoken);
-         outCondition.Append(currenttoken);
-         match(currenttoken, T);
-         Condition := (leftvalue > rightvalue);
-
-      elsif(currenttoken = "<=") then
-         outCondition.Append(currenttoken);
-         match(currenttoken, T);
-         currenttoken := T.tokens.First_Element;
-         rightvalue := readTokenValue(currenttoken);
-         outCondition.Append(currenttoken);
-         match(currenttoken, T);
-         Condition := (leftvalue <= rightvalue);
-
-      elsif(currenttoken = ">=") then
-         outCondition.Append(currenttoken);
-         match(currenttoken, T);
-         currenttoken := T.tokens.First_Element;
-         rightvalue := readTokenValue(currenttoken);
-         outCondition.Append(currenttoken);
-         match(currenttoken, T);
-         Condition := (leftvalue >= rightvalue);
-
-      elsif(currenttoken = "=") then
-         outCondition.Append(currenttoken);
-         match(currenttoken, T);
-         currenttoken := T.tokens.First_Element;
-         rightvalue := readTokenValue(currenttoken);
-         outCondition.Append(currenttoken);
-         match(currenttoken, T);
-         Condition := (leftvalue = rightvalue);
-
-      elsif(currenttoken = "/=") then
-         outCondition.Append(currenttoken);
-         match(currenttoken, T);
-         currenttoken := T.tokens.First_Element;
-         rightvalue := readTokenValue(currenttoken);
-         outCondition.Append(currenttoken);
-         match(currenttoken, T);
-         Condition := (leftvalue /= rightvalue);
-
-      else
-         raise ParserException with ("Not a valid condition: " & currenttoken);
-      end if;
-   end conditionIsTrue;
-
    function readTokenValue(token: in String) return Integer is
-      ParserException : Exception;
+      pragma Assert (token'First = 1);
+      u_token : Unbounded_String := To_Unbounded_String(token);
       variablevalue: Integer;
    begin
       if(isVariable(token)) then
-         variablevalue := variables(Character'Value(token));
+         --Put(token);
+         variablevalue := variables(Element(u_token, 1));
          if not variablevalue'Valid then
-            raise ParserException with ("Variable " & token & " not declared.");
+            raise ParserException with ("Variable " & token & " not valid.");
          end if;
          return variablevalue;
-
 
       elsif(isConstant(token)) then
          return Integer'Value(token);
@@ -202,8 +90,6 @@ package body Tokenhandlers is
          raise ParserException with ("Not a valid variable : " & token);
       end if;
    end readTokenValue;
-
-
 
 end TokenHandlers;
 
